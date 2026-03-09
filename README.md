@@ -2,9 +2,9 @@
 
 [[`arXiv`](https://arxiv.org/abs/2409.02828)][[`Paper`](https://ieeexplore.ieee.org/document/10948346)][[`Project`](https://starhiking.github.io/ExpLLM_Page/)]
 
-> [ExpLLM: Towards Chain of Thought for Facial Expression Recognition](https://starhiking.github.io/ExpLLM_Page/)  
-> Xing Lan, Jian Xue, Ji Qi, Dongmei Jiang, Ke Lu and Tat-Seng Chua
-> ```(IEEE TMM 2025)```
+> [ExpLLM: Towards Chain of Thought for Facial Expression Recognition](https://github.com/TheW1nc1/ExpLLM-qwen3-vl2B)  
+> The_wind
+> ```(Modified Version)```
 
 ![overview](./img/pipeline.jpg)
 
@@ -91,7 +91,15 @@ Change `IDX` option in script to specify the gpu ids for evaluation, multiple id
 
 Accuracy:
 
+**1. Original ExpLLM (Vicuna-7B):**
 ![Accuracy result](./img/result.jpg)
+
+**2. Qwen3-VL-2B Fine-tuned (RAF-DB):**
+- **Exp dismatch number:** 0
+- **Exp Accuracy:** 0.3869
+- **Checkpoint:** `saves/qwen3vl2b/lora/rafdb_expllm_4aug/checkpoint-1765`
+
+![Qwen3 Accuracy result](./img/qwen3_result.png)
 
 Note that GPU memory should not be less than 24GB.
 
@@ -225,6 +233,9 @@ ValueError: The number of images does not match the number of <image> tokens in 
 
 
 
+## Contact me
+If you have any questions about this code, feel free to contact me at 3066257338@qq.com.
+
 ## Citations
 If you find this code useful for your research, please cite our paper:
 
@@ -240,8 +251,5 @@ If you find this code useful for your research, please cite our paper:
   doi={10.1109/TMM.2025.3557704}}
 ```
 
-## Contact me
-If you have any questions about this code or paper, feel free to contact me at lanxing19@mails.ucas.ac.cn.
-
 ## Acknowledgement
-The code is mainly encouraged by [LocLLM](https://github.com/kennethwdk/LocLLM), [Pink](https://github.com/SY-Xuan/Pink) and [LLaVA](https://github.com/haotian-liu/LLaVA). 
+The code is mainly encouraged by [LocLLM](https://github.com/kennethwdk/LocLLM), [Pink](https://github.com/SY-Xuan/Pink) and [LLaVA](https://github.com/haotian-liu/LLaVA).
